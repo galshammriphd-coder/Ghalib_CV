@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ghalib H. Alshammri — Research &amp; Innovation Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;0,9..144,800;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600;700&family=Zain:wght@400;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════
+   THE RESEARCH SPECTRUM — a light-mode identity
+   where each research pillar owns a wavelength:
+   AI → indigo · Governance → violet
+   Energy & Sustainability → amber→green · Health → teal
+   ════════════════════════════════════════════ */
+:root{
+  --paper:#FBFBF8;
+  --paper-2:#F3F4EF;
+  --ink:#14192B;
+  --muted:#5D6678;
+  --line:#E6E8EE;
+  --card:#FFFFFF;
+
+  --ai:#4338CA;
+  --gov:#7C3AED;
+  --energy:#D97706;
+  --green:#16A34A;
+  --health:#0D9488;
+
+  --spectrum:linear-gradient(90deg,var(--ai),var(--gov),var(--health),var(--green),var(--energy));
+  --r-lg:22px; --r-md:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Space Grotesk',sans-serif;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+
+/* ── bilingual engine ─────────────────────── */
+html[lang="en"] .ar{display:none!important}
+html[lang="ar"] .en{display:none!important}
+html[lang="ar"] body{font-family:'IBM Plex Sans Arabic',sans-serif}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .serif{font-family:'Zain',sans-serif}
+html[lang="ar"] .en-only{display:none!important}
+
+/* ── spectrum progress bar ────────────────── */
+#progress{position:fixed;top:0;inset-inline-start:0;height:4px;width:0;background:var(--spectrum);z-index:200;transition:width .15s linear}
+
+/* ── floating controls ────────────────────── */
+.controls{position:fixed;top:18px;inset-inline-end:18px;z-index:150;display:flex;gap:10px}
+.ctrl{
+  border:1.5px solid var(--ink);background:var(--card);color:var(--ink);
+  border-radius:999px;padding:9px 22px;font-weight:700;font-size:.92rem;cursor:pointer;
+  font-family:inherit;box-shadow:4px 4px 0 var(--ink);transition:.18s;
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+}
+.ctrl:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.ctrl:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.ctrl.lang{background:var(--ink);color:#FDF6DF}
+
+/* ── side observatory rail ────────────────── */
+.rail{position:fixed;top:50%;inset-inline-start:22px;transform:translateY(-50%);z-index:140;display:flex;flex-direction:column;gap:16px}
+.rail a{position:relative;width:12px;height:12px;border-radius:50%;border:2px solid #C7CBD8;background:var(--card);transition:.25s;display:block}
+.rail a:hover,.rail a.on{border-color:var(--ink);background:var(--ink);transform:scale(1.25)}
+.rail a span{
+  position:absolute;top:50%;inset-inline-start:24px;transform:translateY(-50%);
+  background:var(--ink);color:#FDF6DF;font-size:.72rem;font-weight:600;letter-spacing:.4px;
+  padding:3px 12px;border-radius:999px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s;
+}
+.rail a:hover span{opacity:1}
+@media(max-width:1180px){.rail{display:none}}
+
+/* ── hero ─────────────────────────────────── */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:96px 24px 140px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.mesh{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none}
+.m1{width:520px;height:520px;background:#C7D2FE;top:-140px;inset-inline-start:-120px}
+.m2{width:460px;height:460px;background:#99F6E4;bottom:-160px;inset-inline-end:-100px}
+.m3{width:380px;height:380px;background:#FDE68A;top:30%;inset-inline-end:18%}
+.hero-in{position:relative;max-width:1120px;margin:0 auto;width:100%;z-index:2}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:22px;
+}
+html[lang="ar"] .kicker{letter-spacing:0;font-size:.95rem}
+.kicker::before{content:"";width:46px;height:2px;background:var(--spectrum)}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem);font-weight:800;line-height:1.08;letter-spacing:-.5px}
+html[lang="ar"] .hero h1{letter-spacing:0;line-height:1.25}
+.hero h1 .hollow{
+  color:transparent;-webkit-text-stroke:2px var(--ink);
+  font-style:italic;display:inline-block;
+}
+html[lang="ar"] .hero h1 .hollow{font-style:normal}
+.role{
+  margin-top:26px;font-size:clamp(1.05rem,2.4vw,1.5rem);font-weight:600;
+  display:inline-block;background:var(--ink);color:#FDF6DF;padding:8px 26px;border-radius:4px;
+  transform:rotate(-1deg);box-shadow:5px 5px 0 rgba(20,25,43,.14);
+}
+.lede{max-width:760px;margin-top:30px;font-size:1.04rem;color:#333B4F}
+.lede b{background:linear-gradient(transparent 62%, #FDE68A 62%)}
+.hero-contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.hc{
+  display:inline-flex;align-items:center;gap:8px;background:var(--card);
+  border:1.5px solid var(--line);border-radius:999px;padding:8px 18px;
+  font-size:.88rem;color:var(--ink);text-decoration:none;transition:.2s;
+}
+.hc:hover{border-color:var(--ink);transform:translateY(-2px)}
+.scroll-cue{position:absolute;bottom:28px;inset-inline-start:50%;transform:translateX(-50%);color:var(--muted);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2.2s infinite}
+html[dir="rtl"] .scroll-cue{transform:translateX(50%)}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+html[dir="rtl"] @keyframes bob{}
+
+/* ── stats band ───────────────────────────── */
+.band{background:var(--ink);color:#FDF6DF;padding:0;position:relative;z-index:3}
+.band-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.b-cell{padding:30px 18px;text-align:center;border-inline-start:1px dashed rgba(253,246,223,.25)}
+.b-cell:first-child{border-inline-start:none}
+.b-cell b{display:block;font-family:'Fraunces',serif;font-size:2.5rem;font-weight:800;line-height:1.1}
+html[lang="ar"] .b-cell b{font-family:'Zain',sans-serif}
+.b-cell b span{color:#FACC15}
+.b-cell small{font-size:.8rem;opacity:.75;display:block;margin-top:4px;line-height:1.5}
+
+/* ── sections ─────────────────────────────── */
+main{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:84px 0 10px;position:relative;scroll-margin-top:40px}
+.sec-head{position:relative;margin-bottom:40px}
+.ghost{
+  position:absolute;top:-58px;inset-inline-start:-10px;font-family:'Fraunces',serif;
+  font-size:clamp(5rem,13vw,9rem);font-weight:800;color:transparent;
+  -webkit-text-stroke:1.5px #E4E7EF;line-height:1;pointer-events:none;user-select:none;
+}
+.sec-head h2{position:relative;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}
+.sec-head h2::after{content:"";display:block;width:92px;height:5px;border-radius:99px;background:var(--spectrum);margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:10px;max-width:640px}
+
+/* ── research pillars ─────────────────────── */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
+.pillar{
+  position:relative;background:var(--card);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:26px 22px 22px;overflow:hidden;transition:.28s;
+}
+.pillar::before{content:"";position:absolute;top:0;inset-inline:0;height:6px;background:var(--pc,var(--ai))}
+.pillar:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(20,25,43,.1);border-color:var(--pc)}
+.pillar .pic{
+  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;background:var(--pcS,#E8E7F9);margin-bottom:14px;
+}
+.pillar h3{font-size:1.1rem;font-weight:700;color:var(--pc)}
+.pillar p{color:var(--muted);font-size:.9rem;margin-top:8px}
+.pillar .kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.pillar .kw span{
+  font-size:.72rem;font-weight:600;border:1px solid var(--pcB,#BDB9EC);
+  color:var(--pc);border-radius:999px;padding:2px 10px;background:var(--pcT,#F4F3FC);
+}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:22px}
+.svc .s{
+  background:var(--paper-2);border:1.5px dashed #D5D9E3;border-radius:var(--r-md);
+  padding:16px 18px;font-size:.9rem;transition:.2s;
+}
+.svc .s:hover{border-style:solid;border-color:var(--ink);background:var(--card)}
+.svc .s b{display:block;font-size:.98rem;margin-bottom:3px}
+.svc .s a{color:var(--ai);font-weight:600;text-decoration:none}
+.svc .s a:hover{text-decoration:underline}
+
+/* ── experience timeline ──────────────────── */
+.timeline{position:relative;padding-inline-start:34px}
+.timeline::before{content:"";position:absolute;inset-inline-start:10px;top:8px;bottom:8px;width:2px;background:repeating-linear-gradient(to bottom,var(--ink) 0 6px,transparent 6px 12px);opacity:.25}
+.t-item{position:relative;margin-bottom:16px}
+.t-item::before{
+  content:"";position:absolute;inset-inline-start:-31px;top:24px;width:15px;height:15px;
+  border-radius:50%;background:var(--card);border:2.5px solid var(--ink);
+}
+.t-item.now::before{background:var(--ink);box-shadow:0 0 0 6px rgba(67,56,202,.14)}
+.card{
+  background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);
+  padding:20px 24px;transition:.25s;
+}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 #E4E7EF;border-color:var(--ink)}
+html[dir="rtl"] .card:hover{transform:translate(3px,-3px);box-shadow:-6px 6px 0 #E4E7EF}
+.t-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.t-top h3{font-size:1.1rem;font-weight:700}
+.org{color:var(--health);font-size:.9rem;font-weight:600;margin-top:2px}
+.badge{
+  font-size:.75rem;font-weight:700;background:var(--ink);color:#FDF6DF;
+  border-radius:6px;padding:3px 13px;white-space:nowrap;letter-spacing:.3px;
+}
+.badge.soft{background:var(--paper-2);color:var(--muted);border:1px solid var(--line)}
+.t-item ul{margin-top:10px;padding-inline-start:20px;color:var(--muted);font-size:.92rem}
+.t-item ul li{margin-bottom:4px}
+.t-item ul li::marker{color:var(--energy)}
+
+/* ── education ────────────────────────────── */
+.edu-grid{display:grid;gap:16px}
+.deg{font-size:1.14rem;font-weight:700}
+.uni{color:var(--gov);font-weight:600;font-size:.92rem;margin-top:2px}
+.meta{color:var(--muted);font-size:.9rem;margin-top:10px;border-inline-start:3px solid #EDEFF5;padding-inline-start:14px}
+.meta b{color:var(--ink)}
+
+/* ── accordion ────────────────────────────── */
+details{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-md);margin-bottom:12px;overflow:hidden}
+details[open]{border-color:var(--ink);box-shadow:5px 5px 0 #EDEFF5}
+html[dir="rtl"] details[open]{box-shadow:-5px 5px 0 #EDEFF5}
+summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;align-items:center;gap:13px;font-weight:700;font-size:1rem}
+summary::-webkit-details-marker{display:none}
+summary .pm{
+  width:27px;height:27px;border-radius:8px;border:1.5px solid var(--ink);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;transition:.25s;background:var(--card);
+}
+details[open] summary .pm{background:var(--ink);color:#FDF6DF;transform:rotate(45deg)}
+details .body{padding:0 22px 18px;color:var(--muted);font-size:.93rem}
+details .body b{color:var(--ink)}
+.pill{display:inline-block;margin-top:8px;font-size:.75rem;font-weight:700;background:#FEF3C7;color:#92400E;border-radius:999px;padding:3px 14px}
+
+/* ── chips / grids ────────────────────────── */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  background:var(--card);border:1.5px solid var(--line);border-radius:999px;
+  padding:9px 20px;font-size:.9rem;font-weight:500;transition:.2s;cursor:default;
+}
+.chip:hover{border-color:var(--ink);background:var(--ink);color:#FDF6DF;transform:rotate(-1.5deg) scale(1.04)}
+.chip.r{border-style:dashed}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px}
+.mini{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-md);padding:16px 18px;transition:.22s}
+.mini:hover{border-color:var(--ink);transform:translateY(-4px)}
+.mini h3{font-size:.98rem;font-weight:700}
+.mini p{color:var(--muted);font-size:.86rem;margin-top:4px}
+.tag{display:inline-block;margin-top:10px;font-size:.73rem;font-weight:600;color:var(--health);background:rgba(13,148,136,.08);border-radius:999px;padding:2px 12px}
+
+/* ── languages bars ───────────────────────── */
+.bar-row{margin-bottom:16px}
+.lbl{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem;margin-bottom:6px}
+.lbl span{color:var(--muted);font-weight:400;font-size:.84rem}
+.bar{height:11px;background:#ECEEF4;border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--spectrum);transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+
+/* ── highlights ───────────────────────────── */
+.hl .card{border-inline-start:5px solid var(--energy)}
+.hl .card:nth-child(2n){border-inline-start-color:var(--health)}
+.hl .card:nth-child(3n){border-inline-start-color:var(--gov)}
+.hl h3{font-size:1.02rem;font-weight:700}
+.hl p{color:var(--muted);font-size:.9rem;margin-top:6px}
+
+/* ── footer ───────────────────────────────── */
+footer{margin-top:90px;background:var(--ink);color:#C9CFDD;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--spectrum)}
+.f-in{max-width:1120px;margin:0 auto;padding:48px 24px;text-align:center}
+.f-in .name{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:800;color:#fff}
+html[lang="ar"] .f-in .name{font-family:'Zain',sans-serif}
+.f-links{margin-top:14px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:.9rem}
+.f-links a{color:#FACC15;text-decoration:none;font-weight:600}
+.f-links a:hover{text-decoration:underline}
+
+/* ── reveal ───────────────────────────────── */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .bar i{transition:none}
+  html{scroll-behavior:auto}
+  .scroll-cue{animation:none}
+}
+
+/* ── v2: clearer, larger typography ───────── */
+:root{--muted:#4A5468}
+body{font-size:17px}
+html[lang="ar"] body{font-size:17.5px}
+.kicker{font-size:.88rem}
+html[lang="ar"] .kicker{font-size:1rem}
+.lede{font-size:1.16rem}
+.hc{font-size:.95rem;padding:9px 20px}
+.b-cell small{font-size:.88rem;opacity:.85}
+.sec-head p{font-size:1.04rem}
+.pillar h3{font-size:1.18rem}
+.pillar p{font-size:.97rem}
+.pillar .kw span{font-size:.78rem}
+.svc .s{font-size:.95rem}
+.svc .s b{font-size:1.04rem}
+.t-top h3{font-size:1.17rem}
+.org{font-size:.96rem}
+.t-item ul{font-size:.97rem}
+.badge{font-size:.8rem}
+.deg{font-size:1.2rem}
+.uni{font-size:.97rem}
+.meta{font-size:.95rem}
+summary{font-size:1.06rem}
+details .body{font-size:.97rem}
+.chip{font-size:.96rem}
+.mini h3{font-size:1.05rem}
+.mini p{font-size:.92rem}
+.tag{font-size:.78rem}
+.lbl{font-size:1rem}
+.lbl span{font-size:.88rem}
+.hl h3{font-size:1.08rem}
+.hl p{font-size:.95rem}
+.f-links{font-size:.95rem}
+
+/* ── pdf capture mode ─────────────────────── */
+.pdf-mode .controls,.pdf-mode .rail,.pdf-mode #progress,.pdf-mode .scroll-cue,.pdf-mode #net,.pdf-mode .mesh{display:none!important}
+.pdf-mode .hero{min-height:auto;padding:56px 24px 90px}
+.pdf-mode .reveal{opacity:1!important;transform:none!important;transition:none!important}
+.pdf-mode .card,.pdf-mode .mini,.pdf-mode .pillar,.pdf-mode details,.pdf-mode .svc .s{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+.pdf-mode .hero h1 .hollow{color:var(--ink);-webkit-text-stroke:0}
+.pdf-mode .lede b,.pdf-mode .pillar p b,.pdf-mode details .body b{margin:0 .14em}
+.pdf-mode .hero h1{word-spacing:.08em}
+
+/* ── print ────────────────────────────────── */
+@media print{
+  .controls,.rail,#progress,.scroll-cue,#net,.mesh{display:none!important}
+  body{background:#fff}
+  .hero{min-height:auto;padding:46px 36px 112px;border-radius:22px;margin:4px 2px}
+  .hero h1{font-size:3.4rem}
+  .hero h1 .hollow{color:var(--ink);-webkit-text-stroke:0}
+  .band{border-radius:18px;margin:16px 2px 0}
+  .band-in{grid-template-columns:repeat(5,1fr)}
+  .b-cell{padding:20px 8px}
+  .b-cell b{font-size:1.7rem}
+  .b-cell small{font-size:.72rem}
+  main{padding:0 4px}
+  section{padding:34px 0 0}
+  .ghost{font-size:5.2rem;top:-32px}
+  .pillars,.grid2{grid-template-columns:1fr 1fr}
+  .grid3,.svc{grid-template-columns:1fr 1fr 1fr}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .card,.mini,.pillar,details,.svc .s,.t-item,.b-cell{box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+  .sec-head{break-after:avoid;page-break-after:avoid;break-inside:avoid}
+  footer{border-radius:18px;margin:28px 2px 0}
+  a{text-decoration:none}
+}
+@media (max-width:640px){
+  .t-top{flex-direction:column;gap:6px}
+  .controls{top:12px;inset-inline-end:12px}
+  .ctrl{padding:8px 16px;font-size:.85rem}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- floating controls -->
+<div class="controls">
+  <button class="ctrl lang" id="langBtn" onclick="toggleLang()">
+    <span class="en">🌐 العربية</span><span class="ar">🌐 English</span>
+  </button>
+  <button class="ctrl" id="pdfBtn" onclick="savePDF(this)">
+    <span class="en">⬇️ Save PDF</span><span class="ar">⬇️ حفظ PDF</span>
+  </button>
+</div>
+
+<!-- observatory rail -->
+<div class="rail" id="rail">
+  <a href="#research"><span class="en">Research</span><span class="ar">البحث العلمي</span></a>
+  <a href="#exp"><span class="en">Experience</span><span class="ar">الخبرات</span></a>
+  <a href="#edu"><span class="en">Education</span><span class="ar">المؤهلات</span></a>
+  <a href="#init"><span class="en">Initiatives</span><span class="ar">المبادرات</span></a>
+  <a href="#skills"><span class="en">Expertise</span><span class="ar">مجالات الخبرة</span></a>
+  <a href="#courses"><span class="en">Teaching</span><span class="ar">التدريس</span></a>
+  <a href="#certs"><span class="en">Certifications</span><span class="ar">الشهادات</span></a>
+  <a href="#proud"><span class="en">Highlights</span><span class="ar">الإنجازات</span></a>
+</div>
+
+<!-- ═════════ HERO ═════════ -->
+<div class="hero" id="top">
+  <canvas id="net"></canvas>
+  <div class="mesh m1"></div><div class="mesh m2"></div><div class="mesh m3"></div>
+  <div class="hero-in">
+    <div class="kicker">
+      <span class="en">Researcher · Consultant · Founder</span>
+      <span class="ar">باحث · مستشار · مؤسس</span>
+    </div>
+    <h1>
+      <span class="en">Dr. Ghalib H.<br><span class="hollow">Alshammri</span></span>
+      <span class="ar">د. غالب بن حمود<br><span class="hollow">الشمري</span></span>
+    </h1>
+    <div class="role">
+      <span class="en">Associate Professor in AI &amp; Emerging Technologies</span>
+      <span class="ar">أستاذ مشارك في الذكاء الاصطناعي والتقنيات الناشئة</span>
+    </div>
+    <p class="lede">
+      <span class="en">A researcher and consultant working where <b>artificial intelligence</b> meets <b>governance</b>, <b>energy &amp; sustainability</b>, and <b>health</b> — from bio-molecular nano-communication networks and the Internet of Bio-Nano Things to large language models, agentic AI, and national-scale digital transformation. Founder of two Saudi scientific societies and a peer reviewer for Q1 journals in the Web of Science.</span>
+      <span class="ar">باحث ومستشار يعمل عند نقطة التقاء <b>الذكاء الاصطناعي</b> مع <b>الحوكمة</b> و<b>الطاقة والاستدامة</b> و<b>الصحة</b> — من شبكات الاتصالات الجزيئية الحيوية النانوية وإنترنت الأشياء الحيوية النانوية، إلى النماذج اللغوية الضخمة والذكاء الاصطناعي الوكيلي ومشاريع التحوّل الرقمي الوطنية. مؤسس لجمعيتين علميتين سعوديتين، ومحكّم علمي في مجلات الربع الأول (<span dir="ltr">Q1</span>) ضمن قاعدة <span dir="ltr">Web of Science</span>.</span>
+    </p>
+    <div class="hero-contact">
+      <a class="hc" href="mailto:galshammri@ksu.edu.sa">✉️ galshammri@ksu.edu.sa</a>
+      <a class="hc" href="tel:+966555250559">📞 <span dir="ltr">+966 55 525 0559</span></a>
+      <span class="hc">📍 <span class="en">Riyadh — King Saud University</span><span class="ar">الرياض — جامعة الملك سعود</span></span>
+      <a class="hc" href="https://ksu.sa/tQUC0" target="_blank" rel="noopener">🎓 <span class="en">Google Scholar</span><span class="ar">الباحث العلمي</span></a>
+      <a class="hc" href="https://linkedin.com/in/dr-ghalib" target="_blank" rel="noopener">💼 LinkedIn</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="en">Scroll</span><span class="ar">مرّر للأسفل</span> ↓</div>
+</div>
+
+<!-- ═════════ STATS BAND ═════════ -->
+<div class="band">
+  <div class="band-in">
+    <div class="b-cell"><b data-count="20">0</b><small><span class="en">Years of academic &amp; professional experience</span><span class="ar">عامًا من الخبرة الأكاديمية والمهنية</span></small></div>
+    <div class="b-cell"><b data-count="4">0</b><small><span class="en">Research pillars: AI, governance, sustainability, health</span><span class="ar">ركائز بحثية: الذكاء الاصطناعي، الحوكمة، الاستدامة، الصحة</span></small></div>
+    <div class="b-cell"><b data-count="12">0</b><small><span class="en">Professional certificates from world-class universities</span><span class="ar">شهادة احترافية من جامعات عالمية</span></small></div>
+    <div class="b-cell"><b data-count="9" data-plus="+">0</b><small><span class="en">Training programs &amp; bootcamps founded and led</span><span class="ar">برامج ومعسكرات تدريبية أسسها وقادها</span></small></div>
+    <div class="b-cell"><b data-count="2">0</b><small><span class="en">Saudi scientific societies founded</span><span class="ar">جمعيتان علميتان سعوديتان أسسهما</span></small></div>
+  </div>
+</div>
+
+<main>
+
+<!-- ═════════ 01 RESEARCH ═════════ -->
+<section id="research">
+  <div class="sec-head reveal">
+    <div class="ghost">01</div>
+    <h2><span class="en">Research &amp; Scholarly Impact</span><span class="ar">البحث العلمي والأثر الأكاديمي</span></h2>
+    <p>
+      <span class="en">A research agenda built on four interlocking pillars — each advancing intelligent, responsible, and sustainable technology.</span>
+      <span class="ar">أجندة بحثية تقوم على أربع ركائز متكاملة، تدفع جميعها نحو تقنية ذكية ومسؤولة ومستدامة.</span>
+    </p>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar reveal" style="--pc:var(--ai);--pcS:#E8E7F9;--pcB:#BDB9EC;--pcT:#F4F3FC">
+      <div class="pic">🧠</div>
+      <h3><span class="en">AI &amp; Intelligent Systems</span><span class="ar">الذكاء الاصطناعي والأنظمة الذكية</span></h3>
+      <p>
+        <span class="en">Diffusion-based bio-molecular nano-communication networks and intelligent signal detection — the core of a PhD at Stevens Institute of Technology — extending today into large language models, generative AI, and multi-agent systems.</span>
+        <span class="ar">شبكات الاتصالات الجزيئية الحيوية النانوية القائمة على الانتشار والكشف الذكي عن الإشارات — جوهر أطروحة الدكتوراه في معهد ستيفنز للتقنية — وتمتد اليوم إلى النماذج اللغوية الضخمة والذكاء الاصطناعي التوليدي وأنظمة الوكلاء المتعددين.</span>
+      </p>
+      <div class="kw">
+        <span><span class="en">Nano-networks</span><span class="ar">الشبكات النانوية</span></span>
+        <span>LLMs</span>
+        <span><span class="en">Multi-Agent AI</span><span class="ar">الوكلاء المتعددون</span></span>
+      </div>
+    </div>
+
+    <div class="pillar reveal" style="--pc:var(--gov);--pcS:#EFE8FD;--pcB:#D1BCF9;--pcT:#F7F3FE">
+      <div class="pic">⚖️</div>
+      <h3><span class="en">AI Governance &amp; Responsible AI</span><span class="ar">حوكمة الذكاء الاصطناعي والذكاء المسؤول</span></h3>
+      <p>
+        <span class="en">Governance, risk, and compliance (GRC) frameworks for AI, data, and cybersecurity; trustworthy and responsible AI adoption; and institutional readiness supporting national digital-transformation and regulatory agendas.</span>
+        <span class="ar">أطر الحوكمة وإدارة المخاطر والالتزام (GRC) للذكاء الاصطناعي والبيانات والأمن السيبراني؛ والتبنّي الموثوق والمسؤول للذكاء الاصطناعي؛ والجاهزية المؤسسية الداعمة لأجندات التحوّل الرقمي والتنظيم الوطنية.</span>
+      </p>
+      <div class="kw">
+        <span><span class="en">Responsible AI</span><span class="ar">الذكاء المسؤول</span></span>
+        <span>AI &amp; Data GRC</span>
+        <span><span class="en">Policy &amp; Compliance</span><span class="ar">السياسات والالتزام</span></span>
+      </div>
+    </div>
+
+    <div class="pillar reveal" style="--pc:var(--green);--pcS:#E3F4E9;--pcB:#ADDFC0;--pcT:#F1F9F4">
+      <div class="pic">🌱</div>
+      <h3><span class="en">Energy &amp; Sustainability</span><span class="ar">الطاقة والاستدامة</span></h3>
+      <p>
+        <span class="en">Nanotechnology for energy applications and AI-driven optimization for resource efficiency — advancing green, sustainable, and data-driven smart solutions aligned with Saudi Vision 2030 sustainability goals.</span>
+        <span class="ar">تقنية النانو لتطبيقات الطاقة، والاستفادة من الذكاء الاصطناعي في تحسين كفاءة الموارد — بما يدعم الحلول الذكية الخضراء والمستدامة المبنية على البيانات، وبما يتواءم مع مستهدفات الاستدامة في رؤية السعودية 2030.</span>
+      </p>
+      <div class="kw">
+        <span><span class="en">Nanotech for Energy</span><span class="ar">نانو الطاقة</span></span>
+        <span><span class="en">Green AI</span><span class="ar">الذكاء الأخضر</span></span>
+        <span><span class="en">Smart Solutions</span><span class="ar">الحلول الذكية</span></span>
+      </div>
+    </div>
+
+    <div class="pillar reveal" style="--pc:var(--health);--pcS:#E2F2F0;--pcB:#AAD9D5;--pcT:#F0F8F8">
+      <div class="pic">🧬</div>
+      <h3><span class="en">Health &amp; Bio-Intelligence</span><span class="ar">الصحة والذكاء الحيوي</span></h3>
+      <p>
+        <span class="en">The Internet of Bio-Nano Things and molecular communications for intra-body healthcare networks; DNA sequence alignment and analysis; and AI applications and education in healthcare settings.</span>
+        <span class="ar">إنترنت الأشياء الحيوية النانوية والاتصالات الجزيئية لشبكات الرعاية الصحية داخل الجسم؛ ومحاذاة سلاسل الحمض النووي وتحليلها؛ وتطبيقات الذكاء الاصطناعي وتعليمه في القطاع الصحي.</span>
+      </p>
+      <div class="kw">
+        <span>IoBNT</span>
+        <span><span class="en">Molecular Comms</span><span class="ar">الاتصالات الجزيئية</span></span>
+        <span><span class="en">AI in Healthcare</span><span class="ar">الذكاء في الصحة</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc">
+    <div class="s reveal"><b>🔍 <span class="en">Q1 Peer Reviewer</span><span class="ar">محكّم علمي (Q1)</span></b>
+      <span class="en">Reviewer for first-quartile journals in the Web of Science.</span>
+      <span class="ar">محكّم في مجلات الربع الأول ضمن قاعدة Web of Science.</span>
+    </div>
+    <div class="s reveal"><b>💰 <span class="en">Research &amp; Project Grants</span><span class="ar">منح بحثية ومشاريع</span></b>
+      <span class="en">Secured and led grants across academic and government institutions.</span>
+      <span class="ar">الحصول على منح وقيادتها في مؤسسات أكاديمية وجهات حكومية.</span>
+    </div>
+    <div class="s reveal"><b>👨‍🏫 <span class="en">PhD Supervision</span><span class="ar">الإشراف على الدكتوراه</span></b>
+      <span class="en">Supervising PhD students and graduate research groups.</span>
+      <span class="ar">الإشراف على طلبة الدكتوراه والمجموعات البحثية للدراسات العليا.</span>
+    </div>
+    <div class="s reveal"><b>🎤 <span class="en">Invited International Talks</span><span class="ar">محاضرات دولية بدعوة</span></b>
+      <span class="en">Bell Works, NJ (2018) · Honor Global Launch, Dubai (2024).</span>
+      <span class="ar">Bell Works نيوجيرسي (2018) · إطلاق Honor العالمي، دبي (2024).</span>
+    </div>
+    <div class="s reveal"><b>📚 <span class="en">Publications</span><span class="ar">المنشورات العلمية</span></b>
+      <a href="https://ksu.sa/tQUC0" target="_blank" rel="noopener"><span class="en">Full list on Google Scholar →</span><span class="ar">القائمة الكاملة في الباحث العلمي ←</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 02 EXPERIENCE ═════════ -->
+<section id="exp">
+  <div class="sec-head reveal">
+    <div class="ghost">02</div>
+    <h2><span class="en">Work Experience</span><span class="ar">الخبرات العملية</span></h2>
+    <p><span class="en">A career spanning academia, consulting, and institutional founding.</span><span class="ar">مسيرة مهنية تجمع بين الأكاديميا والاستشارات والتأسيس المؤسسي.</span></p>
+  </div>
+  <div class="timeline">
+
+    <div class="t-item now reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Associate Professor in AI and Data Science</span><span class="ar">أستاذ مشارك في الذكاء الاصطناعي وعلوم البيانات</span></h3>
+        <div class="org"><span class="en">King Saud University — Riyadh</span><span class="ar">جامعة الملك سعود — الرياض</span></div></div>
+        <span class="badge"><span class="en">Sep 2023 — Present</span><span class="ar">سبتمبر 2023 — حتى الآن</span></span>
+      </div>
+      <ul>
+        <li><span class="en">Teaching and research supervision in AI, data science, and emerging technologies.</span><span class="ar">التدريس والإشراف البحثي في مجالات الذكاء الاصطناعي وعلوم البيانات والتقنيات الناشئة.</span></li>
+        <li><span class="en">Supervising graduate students and graduation projects.</span><span class="ar">الإشراف على طلبة الدراسات العليا ومشاريع التخرج.</span></li>
+      </ul>
+    </div></div>
+
+    <div class="t-item now reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Founder and Chairman of the Board</span><span class="ar">المؤسس ورئيس مجلس الإدارة</span></h3>
+        <div class="org"><span class="en">Saudi Society for Artificial Intelligence &amp; Intelligent Systems — Riyadh</span><span class="ar">الجمعية السعودية للذكاء الاصطناعي والأنظمة الذكية — الرياض</span></div></div>
+        <span class="badge"><span class="en">May 2023 — Present</span><span class="ar">مايو 2023 — حتى الآن</span></span>
+      </div>
+      <ul><li><span class="en">Leading the society and shaping its strategic direction to empower the AI community in Saudi Arabia.</span><span class="ar">قيادة الجمعية ورسم توجهاتها الاستراتيجية لتمكين مجتمع الذكاء الاصطناعي في المملكة.</span></li></ul>
+    </div></div>
+
+    <div class="t-item now reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">IT, AI and Emerging Technologies Consultant</span><span class="ar">مستشار في تقنية المعلومات والذكاء الاصطناعي والتقنيات الناشئة</span></h3>
+        <div class="org"><span class="en">Government Entities and Organizations (Projects &amp; Initiatives) — Riyadh</span><span class="ar">جهات ومنظمات حكومية (مشاريع ومبادرات) — الرياض</span></div></div>
+        <span class="badge"><span class="en">2021 — Present</span><span class="ar">2021 — حتى الآن</span></span>
+      </div>
+      <ul><li><span class="en">Specialized consulting for strategic digital-transformation and AI projects and initiatives across the public and private sectors.</span><span class="ar">تقديم استشارات متخصصة في مشاريع ومبادرات التحوّل الرقمي والذكاء الاصطناعي ذات الطابع الاستراتيجي في القطاع الحكومي والخاص.</span></li></ul>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Associate Professor (Collaborative / Trainer)</span><span class="ar">أستاذ مشارك (متعاون / مدرّب)</span></h3>
+        <div class="org"><span class="en">Several prestigious academic and leadership institutions</span><span class="ar">عدة جهات أكاديمية وقيادية مرموقة</span></div></div>
+        <span class="badge soft"><span class="en">Ongoing collaboration</span><span class="ar">تعاون مستمر</span></span>
+      </div>
+      <ul>
+        <li><span class="en">Saudi Electronic University — Riyadh.</span><span class="ar">الجامعة السعودية الإلكترونية — الرياض.</span></li>
+        <li><span class="en">Imam Muhammad Ibn Saud Islamic University — Riyadh.</span><span class="ar">جامعة الإمام محمد بن سعود الإسلامية — الرياض.</span></li>
+        <li><span class="en">King Abdullah College for Leadership and Staff — Riyadh.</span><span class="ar">كلية الملك عبدالله للقيادة والأركان — الرياض.</span></li>
+        <li><span class="en">Prince Nayef College for National Security — Riyadh.</span><span class="ar">كلية الأمير نايف للأمن الوطني — الرياض.</span></li>
+        <li><span class="en">Numerous government and private entities and authorities.</span><span class="ar">العديد من الجهات الحكومية والخاصة والهيئات.</span></li>
+      </ul>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Consultant, Deanship of Scientific Research</span><span class="ar">مستشار عمادة البحث العلمي</span></h3>
+        <div class="org"><span class="en">Saudi Electronic University — Riyadh</span><span class="ar">الجامعة السعودية الإلكترونية — الرياض</span></div></div>
+        <span class="badge soft"><span class="en">Aug 2021 — Jul 2023</span><span class="ar">أغسطس 2021 — يوليو 2023</span></span>
+      </div>
+      <ul><li><span class="en">Advancing the scientific research ecosystem and supporting research and innovation initiatives at the university.</span><span class="ar">تطوير منظومة البحث العلمي ودعم المبادرات البحثية والابتكارية في الجامعة.</span></li></ul>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Consultant, Ranking Management — Saudi Global Ranking (Saqr)</span><span class="ar">مستشار إدارة التصنيف — التصنيف السعودي العالمي (صقر)</span></h3>
+        <div class="org"><span class="en">Education &amp; Training Evaluation Commission — Riyadh</span><span class="ar">هيئة تقويم التعليم والتدريب — الرياض</span></div></div>
+        <span class="badge soft"><span class="en">Consulting</span><span class="ar">استشارات</span></span>
+      </div>
+      <ul>
+        <li><span class="en">Supervising the ranking programs platform, surveys, and interactive dashboards.</span><span class="ar">الإشراف على منصة تصنيف البرامج والاستبانات ولوحات المعلومات التفاعلية.</span></li>
+        <li><span class="en">Data management and governance for the ranking platform.</span><span class="ar">إدارة البيانات وحوكمتها في منصة التصنيف.</span></li>
+      </ul>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Designer, Evaluator and Developer of Standardized Test Questions and Exam Models at Qiyas</span><span class="ar">مصمم ومقوّم ومطوّر لأسئلة الاختبارات المعيارية ونماذجها في «قياس»</span></h3>
+        <div class="org"><span class="en">Education &amp; Training Evaluation Commission — Riyadh</span><span class="ar">هيئة تقويم التعليم والتدريب — الرياض</span></div></div>
+        <span class="badge soft"><span class="en">Consulting</span><span class="ar">استشارات</span></span>
+      </div>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Expert in the AI &amp; IoT Community</span><span class="ar">خبير في مجتمع الذكاء الاصطناعي وإنترنت الأشياء</span></h3>
+        <div class="org"><span class="en">Innovation Center — Monsha'at</span><span class="ar">مركز الابتكار — الهيئة العامة للمنشآت الصغيرة والمتوسطة «منشآت»</span></div></div>
+        <span class="badge soft"><span class="en">Expert</span><span class="ar">خبير</span></span>
+      </div>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Founder and Former Board Member</span><span class="ar">المؤسس وعضو مجلس إدارة سابق</span></h3>
+        <div class="org"><span class="en">Saudi Society for Data Science — Riyadh</span><span class="ar">الجمعية السعودية لعلوم البيانات — الرياض</span></div></div>
+        <span class="badge soft"><span class="en">Dec 2019 — Dec 2021</span><span class="ar">ديسمبر 2019 — ديسمبر 2021</span></span>
+      </div>
+    </div></div>
+
+    <div class="t-item reveal"><div class="card">
+      <div class="t-top">
+        <div><h3><span class="en">Collaborating University Professor — Computer Engineering &amp; Electronics Department</span><span class="ar">أستاذ جامعي متعاون — قسم هندسة الحاسب والإلكترونيات</span></h3>
+        <div class="org"><span class="en">Stevens Institute of Technology — New Jersey, USA</span><span class="ar">معهد ستيفنز للتقنية — نيوجيرسي، الولايات المتحدة</span></div></div>
+        <span class="badge soft"><span class="en">Mar 2017 — Aug 2020</span><span class="ar">مارس 2017 — أغسطس 2020</span></span>
+      </div>
+    </div></div>
+
+  </div>
+</section>
+
+<!-- ═════════ 03 EDUCATION ═════════ -->
+<section id="edu">
+  <div class="sec-head reveal">
+    <div class="ghost">03</div>
+    <h2><span class="en">Education</span><span class="ar">المؤهلات العلمية</span></h2>
+    <p><span class="en">A global academic foundation from the USA, Australia, and Saudi Arabia.</span><span class="ar">تكوين أكاديمي عالمي من الولايات المتحدة وأستراليا والمملكة.</span></p>
+  </div>
+  <div class="edu-grid">
+    <div class="card reveal">
+      <div class="t-top">
+        <div>
+          <div class="deg">🎓 <span class="en">PhD in Computer Engineering (Artificial Intelligence)</span><span class="ar">دكتوراه الفلسفة في هندسة الحاسب (الذكاء الاصطناعي)</span></div>
+          <div class="uni"><span class="en">Stevens Institute of Technology — Dept. of Electrical &amp; Computer Engineering, New Jersey, USA</span><span class="ar">معهد ستيفنز للتقنية — قسم الهندسة الكهربائية وهندسة الحاسب، نيوجيرسي، الولايات المتحدة الأمريكية</span></div>
+        </div>
+        <span class="badge"><span class="en">Aug 2014 — May 2019</span><span class="ar">أغسطس 2014 — مايو 2019</span></span>
+      </div>
+      <div class="meta">
+        <span class="en"><b>Thesis:</b> Artificial Intelligence Techniques for Diffusion-Based Bio-Molecular Nano Communication Networks.<br><b>Research Area:</b> Molecular communication nanonetworks and AI — foundational work for intelligent healthcare and bio-nano applications.<br><b>Supervised by:</b> Prof. Victor B. Lawrence — Associate Dean of Engineering &amp; Batchelor Chair Professor.</span>
+        <span class="ar"><b>عنوان الأطروحة:</b> تقنيات الذكاء الاصطناعي لشبكات الاتصالات الجزيئية الحيوية النانوية القائمة على الانتشار.<br><b>المجال البحثي:</b> شبكات الاتصالات الجزيئية النانوية والذكاء الاصطناعي — عمل تأسيسي لتطبيقات الرعاية الصحية الذكية والنانو الحيوي.<br><b>بإشراف:</b> البروفيسور فيكتور ب. لورنس — العميد المشارك لكلية الهندسة وأستاذ كرسي «باتشلر».</span>
+      </div>
+    </div>
+    <div class="card reveal">
+      <div class="t-top">
+        <div>
+          <div class="deg">🎓 <span class="en">Master of Computer Science (Major: Intelligent Systems)</span><span class="ar">ماجستير علوم الحاسب (تخصص: الأنظمة الذكية)</span></div>
+          <div class="uni"><span class="en">University of Wollongong — Australia</span><span class="ar">جامعة ولونغونغ — أستراليا</span></div>
+        </div>
+        <span class="badge"><span class="en">Feb 2007 — Mar 2008</span><span class="ar">فبراير 2007 — مارس 2008</span></span>
+      </div>
+    </div>
+    <div class="card reveal">
+      <div class="t-top">
+        <div>
+          <div class="deg">🎓 <span class="en">Bachelor of Computer Science</span><span class="ar">بكالوريوس علوم الحاسب</span></div>
+          <div class="uni"><span class="en">King Saud University</span><span class="ar">جامعة الملك سعود</span></div>
+        </div>
+        <span class="badge"><span class="en">Jun 1999 — Jun 2003</span><span class="ar">يونيو 1999 — يونيو 2003</span></span>
+      </div>
+      <div class="meta"><span class="en"><b>GPA:</b> 4.43 / 5 with Second Class Honors — <b>Ranked First in Class</b>.</span><span class="ar"><b>المعدل:</b> 4.43 من 5 مع مرتبة الشرف الثانية — <b>الأول على الدفعة</b>.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 04 INITIATIVES ═════════ -->
+<section id="init">
+  <div class="sec-head reveal">
+    <div class="ghost">04</div>
+    <h2><span class="en">Professional Initiatives</span><span class="ar">المبادرات المهنية</span></h2>
+    <p><span class="en">Founding and leading distinctive programs with lasting impact on the education and technology ecosystem.</span><span class="ar">تأسيس وقيادة برامج نوعية تركت أثرًا في المنظومة التعليمية والتقنية.</span></p>
+  </div>
+
+  <details class="reveal" open>
+    <summary><span class="pm">+</span><span class="en">Founding Scientific Societies</span><span class="ar">تأسيس الجمعيات العلمية</span></summary>
+    <div class="body">
+      <span class="en">• Founder of the <b>Saudi Society for Artificial Intelligence and Intelligent Systems</b> — King Saud University.<br>• Founder of the <b>Saudi Society for Data Science</b> — King Saud University.</span>
+      <span class="ar">• تأسيس <b>الجمعية السعودية للذكاء الاصطناعي والأنظمة الذكية</b> — جامعة الملك سعود.<br>• تأسيس <b>الجمعية السعودية لعلوم البيانات</b> — جامعة الملك سعود.</span>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary><span class="pm">+</span><span class="en">Designing Academic Programs</span><span class="ar">تصميم البرامج الأكاديمية</span></summary>
+    <div class="body">
+      <span class="en">Designed three complete academic programs at King Saud University covering <b>Cloud Computing</b>, <b>Cybersecurity</b>, and <b>Data Science</b>.</span>
+      <span class="ar">تصميم ثلاثة برامج أكاديمية متكاملة في جامعة الملك سعود تشمل: <b>الحوسبة السحابية</b>، و<b>الأمن السيبراني</b>، و<b>علوم البيانات</b>.</span>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary><span class="pm">+</span><span class="en">Interdisciplinary Research Hackathon</span><span class="ar">هاكاثون البحوث البينية (متعدد التخصصات)</span></summary>
+    <div class="body">
+      <span class="en">Organized the first hackathon dedicated to scientific research and interdisciplinary fields in the Middle East — Saudi Electronic University.</span>
+      <span class="ar">تنظيم أول هاكاثون مخصص للبحث العلمي والمجالات البينية في الشرق الأوسط — الجامعة السعودية الإلكترونية.</span>
+      <span class="pill"><span class="en">First of its kind in the Middle East</span><span class="ar">الأول من نوعه في الشرق الأوسط</span></span>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary><span class="pm">+</span><span class="en">Founding and Delivering Intensive Bootcamps</span><span class="ar">تأسيس وتدريب المعسكرات التدريبية المكثفة</span></summary>
+    <div class="body">
+      <span class="en">• <b>Data Science &amp; Big Data</b> Bootcamp (60 credit hours) — King Saud University.<br>• <b>Business Intelligence</b> Bootcamp (60 credit hours) — King Saud University.<br>• <b>Artificial Intelligence &amp; IoT</b> Bootcamp (60 credit hours) — King Saud University.<br>• <b>Cybersecurity Governance, Risk Management, and Compliance</b> Program (30 credit hours) — King Saud University.<br>• <b>Data Governance, Risk Management, and Compliance</b> Program (30 credit hours) — King Saud University.</span>
+      <span class="ar">• معسكر <b>علوم البيانات والبيانات الضخمة</b> (60 ساعة معتمدة) — جامعة الملك سعود.<br>• معسكر <b>ذكاء الأعمال</b> (60 ساعة معتمدة) — جامعة الملك سعود.<br>• معسكر <b>الذكاء الاصطناعي وإنترنت الأشياء</b> (60 ساعة معتمدة) — جامعة الملك سعود.<br>• برنامج <b>حوكمة الأمن السيبراني وإدارة المخاطر والالتزام</b> (30 ساعة معتمدة) — جامعة الملك سعود.<br>• برنامج <b>حوكمة البيانات وإدارة المخاطر والالتزام</b> (30 ساعة معتمدة) — جامعة الملك سعود.</span>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary><span class="pm">+</span><span class="en">Government and Corporate Training</span><span class="ar">التدريب الحكومي والمؤسسي</span></summary>
+    <div class="body">
+      <span class="en">Designed and delivered a series of specialized technical and engineering training courses for a range of government entities, authorities, and private-sector organizations.</span>
+      <span class="ar">تصميم وتقديم سلسلة من الدورات التدريبية التقنية والهندسية المتخصصة لمجموعة من الجهات الحكومية والهيئات والقطاع الخاص.</span>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary><span class="pm">+</span><span class="en">Managing and Organizing the "Riyadh Technical 2022" Forum</span><span class="ar">إدارة وتنظيم ملتقى «الرياض التقني 2022»</span></summary>
+    <div class="body">
+      <span class="en">Technical and Vocational Training Corporation — held under the auspices of His Royal Highness Prince Faisal bin Bandar bin Abdulaziz Al Saud, Governor of the Riyadh Region.</span>
+      <span class="ar">المؤسسة العامة للتدريب التقني والمهني — أقيم الملتقى تحت رعاية صاحب السمو الملكي الأمير فيصل بن بندر بن عبدالعزيز آل سعود، أمير منطقة الرياض.</span>
+      <span class="pill">2022</span>
+    </div>
+  </details>
+</section>
+
+<!-- ═════════ 05 EXPERTISE ═════════ -->
+<section id="skills">
+  <div class="sec-head reveal">
+    <div class="ghost">05</div>
+    <h2><span class="en">Areas of Expertise</span><span class="ar">مجالات الخبرة</span></h2>
+    <p><span class="en">A broad spectrum of technical, research, and leadership specializations.</span><span class="ar">طيف واسع من التخصصات التقنية والبحثية والقيادية.</span></p>
+  </div>
+  <div class="chips reveal">
+    <span class="chip r"><span class="en">AI Governance &amp; Responsible AI</span><span class="ar">حوكمة الذكاء الاصطناعي والذكاء المسؤول</span></span>
+    <span class="chip r"><span class="en">AI for Energy &amp; Sustainability</span><span class="ar">الذكاء الاصطناعي للطاقة والاستدامة</span></span>
+    <span class="chip r"><span class="en">AI in Healthcare &amp; Bio-Nano Systems</span><span class="ar">الذكاء الاصطناعي في الصحة والأنظمة الحيوية النانوية</span></span>
+    <span class="chip"><span class="en">Digital Transformation Strategy</span><span class="ar">استراتيجيات التحوّل الرقمي</span></span>
+    <span class="chip"><span class="en">Large Language Models (LLMs)</span><span class="ar">النماذج اللغوية الضخمة (LLMs)</span></span>
+    <span class="chip"><span class="en">Generative AI</span><span class="ar">الذكاء الاصطناعي التوليدي</span></span>
+    <span class="chip"><span class="en">AI Process Automation</span><span class="ar">أتمتة العمليات بالذكاء الاصطناعي</span></span>
+    <span class="chip"><span class="en">AI Agents &amp; Multi-Agent Techniques</span><span class="ar">وكلاء الذكاء الاصطناعي وتقنيات الوكلاء المتعددين</span></span>
+    <span class="chip"><span class="en">Cybersecurity, Data &amp; AI GRC</span><span class="ar">الأمن السيبراني وحوكمة البيانات والذكاء الاصطناعي (GRC)</span></span>
+    <span class="chip"><span class="en">Internet of Bio-Nano Things</span><span class="ar">إنترنت الأشياء الحيوية النانوية</span></span>
+    <span class="chip"><span class="en">Machine Learning &amp; Deep Learning Applications</span><span class="ar">تطبيقات تعلّم الآلة والتعلّم العميق</span></span>
+    <span class="chip"><span class="en">Big Data Analytics &amp; Smart Solutions</span><span class="ar">تحليلات البيانات الضخمة والحلول الذكية</span></span>
+    <span class="chip"><span class="en">Academic Curriculum Development</span><span class="ar">تطوير المناهج الأكاديمية</span></span>
+    <span class="chip"><span class="en">Consulting for Government &amp; Private Sector Projects</span><span class="ar">الاستشارات في مشاريع القطاعين الحكومي والخاص</span></span>
+    <span class="chip"><span class="en">Innovation Leadership &amp; Hackathon Management</span><span class="ar">قيادة الابتكار وإدارة الهاكاثونات</span></span>
+    <span class="chip"><span class="en">Data-Driven Decision Making &amp; KPI Design</span><span class="ar">اتخاذ القرار المبني على البيانات وتصميم مؤشرات الأداء</span></span>
+    <span class="chip"><span class="en">Training Program Development &amp; Delivery</span><span class="ar">تطوير البرامج التدريبية وتقديمها</span></span>
+  </div>
+
+  <div class="grid2" style="margin-top:26px">
+    <div class="card reveal">
+      <h3 style="margin-bottom:16px"><span class="en">Languages</span><span class="ar">اللغات</span></h3>
+      <div class="bar-row"><div class="lbl"><span><span class="en">Arabic</span><span class="ar">العربية</span></span><span><span class="en">Native</span><span class="ar">اللغة الأم</span></span></div><div class="bar"><i data-w="100"></i></div></div>
+      <div class="bar-row"><div class="lbl"><span><span class="en">English</span><span class="ar">الإنجليزية</span></span><span><span class="en">Advanced proficiency</span><span class="ar">إتقان متقدم</span></span></div><div class="bar"><i data-w="92"></i></div></div>
+    </div>
+    <div class="card reveal">
+      <h3 style="margin-bottom:16px"><span class="en">Personal Skills</span><span class="ar">المهارات الشخصية</span></h3>
+      <div class="chips">
+        <span class="chip"><span class="en">Leadership</span><span class="ar">القيادة</span></span>
+        <span class="chip"><span class="en">Effective Communication</span><span class="ar">التواصل الفعّال</span></span>
+        <span class="chip"><span class="en">Self-Motivation</span><span class="ar">التحفيز الذاتي</span></span>
+        <span class="chip"><span class="en">Decision Making</span><span class="ar">اتخاذ القرار</span></span>
+        <span class="chip"><span class="en">Adaptability</span><span class="ar">المرونة والتكيّف</span></span>
+        <span class="chip"><span class="en">Management Skills</span><span class="ar">المهارات الإدارية</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 06 TEACHING ═════════ -->
+<section id="courses">
+  <div class="sec-head reveal">
+    <div class="ghost">06</div>
+    <h2><span class="en">Academic Courses &amp; Supervision</span><span class="ar">المقررات الأكاديمية والإشراف</span></h2>
+    <p><span class="en">Teaching experience at graduate and undergraduate levels.</span><span class="ar">خبرة تدريسية في الدراسات العليا والمرحلة الجامعية.</span></p>
+  </div>
+  <div class="grid2">
+    <div class="mini reveal">
+      <h3><span class="en">Stevens Institute of Technology — USA</span><span class="ar">معهد ستيفنز للتقنية — الولايات المتحدة</span></h3>
+      <p>
+        <span class="en">• Design and Analysis of Network Systems (Graduate)<br>• Design &amp; Implement IoT with Cloud Systems (Graduate)<br>• AI Techniques &amp; Big Data (Graduate)<br>• Supervising research groups for graduate students</span>
+        <span class="ar">• تصميم وتحليل أنظمة الشبكات (دراسات عليا)<br>• تصميم وتنفيذ إنترنت الأشياء مع الأنظمة السحابية (دراسات عليا)<br>• تقنيات الذكاء الاصطناعي والبيانات الضخمة (دراسات عليا)<br>• الإشراف على المجموعات البحثية لطلبة الدراسات العليا</span>
+      </p>
+      <span class="tag"><span class="en">Graduate level</span><span class="ar">دراسات عليا</span></span>
+    </div>
+    <div class="mini reveal">
+      <h3><span class="en">King Saud University — Riyadh</span><span class="ar">جامعة الملك سعود — الرياض</span></h3>
+      <p>
+        <span class="en">• Computer Programming (1) and (2)<br>• Object-Oriented Programming (OOP)<br>• Data Structure<br>• Supervising graduation projects<br>• Supervising PhD students</span>
+        <span class="ar">• برمجة الحاسب (1) و(2)<br>• البرمجة الشيئية OOP<br>• هياكل البيانات Data Structure<br>• الإشراف على مشاريع التخرج<br>• الإشراف على طلبة الدكتوراه</span>
+      </p>
+      <span class="tag"><span class="en">Undergraduate &amp; graduate</span><span class="ar">بكالوريوس ودراسات عليا</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 07 CERTIFICATIONS ═════════ -->
+<section id="certs">
+  <div class="sec-head reveal">
+    <div class="ghost">07</div>
+    <h2><span class="en">Professional Certifications</span><span class="ar">الشهادات الاحترافية</span></h2>
+    <p><span class="en">Continuous professional development from world-leading universities — spanning AI, quantum science, energy, and bio-informatics.</span><span class="ar">تطوير مهني مستمر من أعرق الجامعات العالمية — يشمل الذكاء الاصطناعي وعلوم الكم والطاقة والمعلوماتية الحيوية.</span></p>
+  </div>
+  <div class="grid3">
+    <div class="mini reveal"><h3><span class="en">Machine Learning</span><span class="ar">تعلّم الآلة</span></h3><p><span class="en">Stanford University</span><span class="ar">جامعة ستانفورد</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Internet of Things (IoT)</span><span class="ar">إنترنت الأشياء (IoT)</span></h3><p><span class="en">Stanford University — California</span><span class="ar">جامعة ستانفورد — كاليفورنيا</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Machine Learning for Data Science &amp; Analytics</span><span class="ar">تعلّم الآلة لعلوم البيانات والتحليلات</span></h3><p><span class="en">Columbia University — New York</span><span class="ar">جامعة كولومبيا — نيويورك</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Quantum Information Science I</span><span class="ar">علوم المعلومات الكمّية (1)</span></h3><p><span class="en">Harvard University and MIT</span><span class="ar">جامعة هارفارد ومعهد ماساتشوستس للتقنية (MIT)</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Quantum Machine Learning</span><span class="ar">تعلّم الآلة الكمّي</span></h3><p><span class="en">University of Toronto</span><span class="ar">جامعة تورنتو</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Nanotechnology for Energy</span><span class="ar">تقنية النانو للطاقة</span></h3><p><span class="en">Portland State University — Oregon</span><span class="ar">جامعة بورتلاند الحكومية — أوريغون</span></p></div>
+    <div class="mini reveal"><h3><span class="en">DNA Sequences: Alignments and Analysis</span><span class="ar">تسلسلات الحمض النووي: المحاذاة والتحليل</span></h3><p><span class="en">University of Maryland</span><span class="ar">جامعة ماريلاند</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Certified Quality Practitioner</span><span class="ar">ممارس جودة معتمد</span></h3><p><span class="en">King Saud University</span><span class="ar">جامعة الملك سعود</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Certified Trainer (Engineering &amp; Technology Courses)</span><span class="ar">مدرّب معتمد (دورات هندسية وتقنية)</span></h3><p><span class="en">Technical and Vocational Training Corporation — License #8037970980</span><span class="ar">المؤسسة العامة للتدريب التقني والمهني — رخصة رقم 8037970980</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Academic Leadership</span><span class="ar">القيادة الأكاديمية</span></h3><p><span class="en">Academic Leadership Center, Ministry of Education, with SACM — Virginia, USA</span><span class="ar">مركز القيادة الأكاديمية بوزارة التعليم بالتعاون مع الملحقية الثقافية السعودية — فيرجينيا، الولايات المتحدة</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Key Performance Indicators (KPI) &amp; Benchmarks</span><span class="ar">مؤشرات الأداء الرئيسية (KPI) والمقارنات المعيارية</span></h3><p><span class="en">King Saud University</span><span class="ar">جامعة الملك سعود</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Quality Practitioner Preparation and Academic Accreditation</span><span class="ar">إعداد ممارس الجودة والاعتماد الأكاديمي</span></h3><p><span class="en">King Saud University</span><span class="ar">جامعة الملك سعود</span></p></div>
+    <div class="mini reveal"><h3><span class="en">Academic Course Design and Construction</span><span class="ar">تصميم وبناء المقررات الأكاديمية</span></h3><p><span class="en">King Saud University</span><span class="ar">جامعة الملك سعود</span></p></div>
+  </div>
+</section>
+
+<!-- ═════════ 08 HIGHLIGHTS ═════════ -->
+<section id="proud" class="hl">
+  <div class="sec-head reveal">
+    <div class="ghost">08</div>
+    <h2><span class="en">Career Highlights</span><span class="ar">أبرز الإنجازات ومحطات الفخر</span></h2>
+    <p><span class="en">Professional and scientific milestones, locally and internationally.</span><span class="ar">بصمات مهنية وعلمية محليًا ودوليًا.</span></p>
+  </div>
+  <div class="grid2">
+    <div class="card reveal">
+      <h3>🎤 <span class="en">Speaker at the Honor Global Launch Event — Dubai</span><span class="ar">متحدث في فعالية «هونر» العالمية للإطلاق — دبي</span></h3>
+      <p><span class="en">Delivered a talk titled "The Future of AI" at the Honor Global Launch Event — Dubai, UAE, 16 July 2024.</span><span class="ar">تقديم محاضرة بعنوان «مستقبل الذكاء الاصطناعي» في فعالية الإطلاق العالمية لشركة Honor — دبي، الإمارات العربية المتحدة، 16 يوليو 2024.</span></p>
+    </div>
+    <div class="card reveal">
+      <h3>🎤 <span class="en">Speaker at Bell Works — New Jersey, USA</span><span class="ar">متحدث في Bell Works — نيوجيرسي، الولايات المتحدة</span></h3>
+      <p><span class="en">Presented a scientific paper on achieving low un-coded bit error rate (BER) for nano molecular communications — 28 November 2018.</span><span class="ar">تقديم ورقة علمية حول تحقيق معدل خطأ منخفض غير مشفّر (BER) في الاتصالات الجزيئية النانوية — 28 نوفمبر 2018.</span></p>
+    </div>
+    <div class="card reveal">
+      <h3>🔍 <span class="en">Peer Reviewer for Top-Ranked Journals (Q1)</span><span class="ar">محكّم علمي في أعلى المجلات المصنّفة (Q1)</span></h3>
+      <p><span class="en">Serving as a peer reviewer for first-quartile (Q1) journals in the Web of Science, contributing to academic and scientific quality in advanced research fields.</span><span class="ar">محكّم علمي في مجلات الربع الأول (Q1) ضمن قاعدة Web of Science، بما يسهم في رفع الجودة الأكاديمية والعلمية في مجالات البحث المتقدمة.</span></p>
+    </div>
+    <div class="card reveal">
+      <h3>💰 <span class="en">Research &amp; Project Grants</span><span class="ar">منح بحثية ومشاريع ممولة</span></h3>
+      <p><span class="en">Secured and led multiple research and project grants across academic institutions and government entities, focusing on innovation, digital transformation, and emerging technologies.</span><span class="ar">الحصول على عدد من المنح البحثية ومنح المشاريع وقيادتها في مؤسسات أكاديمية وجهات حكومية، بالتركيز على الابتكار والتحوّل الرقمي والتقنيات الناشئة.</span></p>
+    </div>
+    <div class="card reveal">
+      <h3>🛡️ <span class="en">Strategic Projects</span><span class="ar">مشاريع استراتيجية</span></h3>
+      <p><span class="en">Working on high-impact digital transformation and AI initiatives in collaboration with strategic government and academic entities, involving sensitive data, advanced technologies, and innovative frameworks to enhance organizational efficiency, cybersecurity, and data governance.</span><span class="ar">العمل على مبادرات تحوّل رقمي وذكاء اصطناعي عالية الأثر بالتعاون مع جهات حكومية وأكاديمية استراتيجية، تتضمن بيانات حساسة وتقنيات متقدمة وأطرًا مبتكرة لتعزيز الكفاءة المؤسسية والأمن السيبراني وحوكمة البيانات.</span></p>
+    </div>
+    <div class="card reveal">
+      <h3>🤝 <span class="en">Leadership, Planning &amp; Teamwork</span><span class="ar">القيادة والتخطيط والعمل الجماعي</span></h3>
+      <p><span class="en">Leading cross-functional teams with a culture of trust and shared vision, excelling in strategic planning and decision-making under pressure, and achieving measurable improvements in effectiveness and productivity in high-demand technical environments.</span><span class="ar">قيادة فرق متعددة التخصصات بثقافة قائمة على الثقة والرؤية المشتركة، مع تميّز في التخطيط الاستراتيجي واتخاذ القرار تحت الضغط، وتحقيق تحسينات ملموسة في الكفاءة والإنتاجية في بيئات تقنية عالية المتطلبات.</span></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-in">
+    <div class="name"><span class="en">Dr. Ghalib H. Alshammri</span><span class="ar">د. غالب بن حمود الشمري</span></div>
+    <div style="font-size:.9rem;margin-top:4px"><span class="en">Associate Professor in AI and Emerging Technologies — King Saud University</span><span class="ar">أستاذ مشارك في الذكاء الاصطناعي والتقنيات الناشئة — جامعة الملك سعود</span></div>
+    <div class="f-links">
+      <a href="mailto:galshammri@ksu.edu.sa"><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></a>
+      <a href="https://ksu.sa/tQUC0" target="_blank" rel="noopener"><span class="en">List of Publications</span><span class="ar">قائمة المنشورات العلمية</span></a>
+      <a href="https://linkedin.com/in/dr-ghalib" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── language toggle ── */
+function setLang(l){
+  const r = document.documentElement;
+  r.setAttribute('lang', l);
+  r.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+  try{ localStorage.setItem('cv-lang', l); }catch(e){}
+}
+function toggleLang(){
+  setLang(document.documentElement.getAttribute('lang') === 'en' ? 'ar' : 'en');
+}
+try{
+  const saved = localStorage.getItem('cv-lang');
+  if(saved === 'ar' || saved === 'en') setLang(saved);
+}catch(e){}
+
+/* ── spectrum progress bar ── */
+const prog = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  prog.style.width = (p * 100) + '%';
+}, {passive:true});
+
+/* ── reveal on scroll ── */
+const io = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      e.target.querySelectorAll('.bar i').forEach(b => b.style.width = b.dataset.w + '%');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── animated counters ── */
+const cio = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.count, plus = el.dataset.plus || '+';
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced){ el.innerHTML = target + '<span>' + plus + '</span>'; cio.unobserve(el); return; }
+    let cur = 0; const step = Math.max(1, Math.ceil(target / 40));
+    const t = setInterval(() => {
+      cur += step;
+      if(cur >= target){ clearInterval(t); el.innerHTML = target + '<span>' + plus + '</span>'; }
+      else el.textContent = cur;
+    }, 32);
+    cio.unobserve(el);
+  });
+}, {threshold:.5});
+document.querySelectorAll('[data-count]').forEach(c => cio.observe(c));
+
+/* ── rail active dot ── */
+const dots = document.querySelectorAll('.rail a');
+const secs = [...dots].map(d => document.querySelector(d.getAttribute('href')));
+const nio = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(e.isIntersecting){
+      dots.forEach(d => d.classList.toggle('on', d.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, {rootMargin:'-35% 0px -55% 0px'});
+secs.forEach(s => s && nio.observe(s));
+
+/* ── save as PDF (downloadable file) ── */
+function loadScript(src){
+  return new Promise((ok, err) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = ok; s.onerror = err;
+    document.head.appendChild(s);
+  });
+}
+// نسختا PDF عاليتا الجودة المخزّنتان داخل هذا الأرتيفاكت
+const PDF_ASSETS = {
+  en: '/_blob/ee9641b8a1a9d8f8039a9c642ea8ded0',
+  ar: '/_blob/6621c06ce5039e6fc63aca9e0fbd1092'
+};
+async function savePDF(btn){
+  const label = btn.innerHTML, ar = document.documentElement.getAttribute('lang') === 'ar';
+  btn.innerHTML = ar ? '⏳ جارٍ تجهيز الملف…' : '⏳ Preparing…';
+  btn.disabled = true;
+  try{
+    const fname = ar ? 'CV_Dr_Ghalib_Alshammri_AR.pdf' : 'CV_Dr_Ghalib_Alshammri_EN.pdf';
+
+    // ‎1) النسخة عالية الجودة المخزّنة داخل الأرتيفاكت
+    let blob = null;
+    try{
+      const res = await fetch(PDF_ASSETS[ar ? 'ar' : 'en'], {cache: 'no-store'});
+      if(res.ok) blob = await res.blob();
+      if(blob && blob.size < 10000) blob = null;
+    }catch(_){ blob = null; }
+
+    // ‎2) احتياط: توليد الملف داخل الصفحة
+    if(!blob){
+      if(!window.html2pdf){
+        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js');
+      }
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      document.querySelectorAll('.bar i').forEach(b => b.style.width = b.dataset.w + '%');
+      document.querySelectorAll('[data-count]').forEach(el => {
+        el.innerHTML = el.dataset.count + '<span>' + (el.dataset.plus || '+') + '</span>';
+      });
+      document.querySelectorAll('details').forEach(d => d.open = true);
+      document.body.classList.add('pdf-mode');
+      window.scrollTo(0, 0);
+      await new Promise(r => setTimeout(r, 300));
+      blob = await html2pdf().set({
+        margin: [8, 7, 11, 7],
+        image: {type: 'jpeg', quality: .96},
+        html2canvas: {scale: 2, useCORS: true, backgroundColor: '#FBFBF8', windowWidth: 1180, scrollY: 0},
+        jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'},
+        pagebreak: {mode: ['css', 'legacy'], avoid: ['.card', '.mini', '.pillar', 'details', '.svc .s', '.b-cell', '.sec-head']}
+      }).from(document.body).outputPdf('blob');
+      document.body.classList.remove('pdf-mode');
+    }
+
+    // داخل claude.ai يُسلَّم الملف عبر قدرة التنزيلات في المنصة؛
+    // وخارجها يُنزَّل مباشرة.
+    let dl = null;
+    try{
+      if(window.claude && typeof claude.use === 'function') dl = await claude.use('downloads');
+    }catch(_){ dl = null; }
+
+    let saved = false;
+    if(dl){
+      try{
+        await dl.save({filename: fname, data: blob});
+        saved = true;
+      }catch(err){
+        if(err && err.code === 'declined'){
+          saved = false; // المستخدم رفض الحفظ — ليس خطأ
+        }else{
+          saved = directDownload(blob, fname);
+        }
+      }
+    }else{
+      saved = directDownload(blob, fname);
+    }
+    if(saved){
+      btn.innerHTML = ar ? '✅ تم حفظ الملف' : '✅ Saved';
+      await new Promise(r => setTimeout(r, 1500));
+    }
+  }catch(e){
+    btn.innerHTML = ar ? '\u26a0\ufe0f \u062a\u0639\u0630\u0651\u0631 \u0627\u0644\u0625\u0646\u0634\u0627\u0621 \u2014 \u0623\u0639\u062f \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629' : '\u26a0\ufe0f Failed \u2014 try again';
+    await new Promise(r => setTimeout(r, 2200));
+  }finally{
+    document.body.classList.remove('pdf-mode');
+    btn.innerHTML = label;
+    btn.disabled = false;
+  }
+}
+function directDownload(blob, fname){
+  try{
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = fname;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 8000);
+    return true;
+  }catch(_){ return false; }
+}
+
+/* ── hero neural constellation ── */
+(function(){
+  const cv = document.getElementById('net');
+  if(!cv) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ctx = cv.getContext('2d');
+  let W, H, pts = [];
+  const COLORS = ['67,56,202','124,58,237','13,148,136','22,163,74','217,119,6'];
+  function size(){
+    W = cv.width = cv.offsetWidth * devicePixelRatio;
+    H = cv.height = cv.offsetHeight * devicePixelRatio;
+  }
+  function init(){
+    size();
+    const n = Math.min(70, Math.floor(W / 28));
+    pts = Array.from({length:n}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-.5)*.35*devicePixelRatio,
+      vy: (Math.random()-.5)*.35*devicePixelRatio,
+      c: COLORS[Math.floor(Math.random()*COLORS.length)],
+      r: (Math.random()*2+1.4)*devicePixelRatio
+    }));
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    const D = 150 * devicePixelRatio;
+    for(let i=0;i<pts.length;i++){
+      const a = pts[i];
+      for(let j=i+1;j<pts.length;j++){
+        const b = pts[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+        if(d < D){
+          ctx.strokeStyle = 'rgba(' + a.c + ',' + (0.14*(1-d/D)) + ')';
+          ctx.lineWidth = devicePixelRatio;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = 'rgba(' + a.c + ',.5)';
+      ctx.beginPath(); ctx.arc(a.x,a.y,a.r,0,7); ctx.fill();
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<0||a.x>W) a.vx*=-1;
+      if(a.y<0||a.y>H) a.vy*=-1;
+    }
+    if(!reduced) requestAnimationFrame(frame);
+  }
+  init(); frame();
+  addEventListener('resize', init, {passive:true});
+})();
+</script>
+</body>
+</html>
